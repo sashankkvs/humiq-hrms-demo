@@ -39,3 +39,6 @@ views.projects=projects;
 const oldBindRole=bindRole;bindRole=function(){oldBindRole();document.querySelectorAll('.resource-link').forEach(x=>x.onclick=e=>{e.preventDefault();toast(`${x.dataset.resource} opened for project members.`)});const np=document.getElementById('new-project');if(np)np.onclick=()=>toast('New project form opened.');document.querySelectorAll('.add-resource').forEach(x=>x.onclick=()=>toast('Resource link form opened — access will be limited to project members.'))};
 renderRole(role==='employee'?'employee-home':'overview');
 
+function initMobileMenu(){const button=document.getElementById('mobile-menu');const sidebar=document.querySelector('.sidebar');if(!button||!sidebar)return;button.onclick=()=>sidebar.classList.toggle('mobile-open');document.querySelectorAll('.nav-item').forEach(item=>item.addEventListener('click',()=>sidebar.classList.remove('mobile-open')))}
+initMobileMenu();
+
