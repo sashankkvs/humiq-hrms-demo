@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Humiq — Lightweight HRMS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="overrides.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand"><span class="brand-mark">H</span><span>humiq</span></div>
+        <div class="workspace-switcher"><span class="workspace-dot"></span><span>Acme Japan</span><span class="chevron">⌄</span></div>
+        <div class="mode-switcher"><button id="employer-mode" class="mode-btn active">Employer</button><button id="employee-mode" class="mode-btn">Employee</button></div>
+        <nav class="nav-group">
+          <div class="nav-label">Workspace</div>
+          <button class="nav-item active" data-view="overview"><span class="nav-icon">⌂</span>Overview</button>
+          <button class="nav-item" data-view="people"><span class="nav-icon">♙</span>People</button>
+          <button class="nav-item" data-view="projects"><span class="nav-icon">▦</span>Projects</button>
+          <button class="nav-item" data-view="timesheets"><span class="nav-icon">◷</span>Timesheets</button>
+          <button class="nav-item" data-view="leave"><span class="nav-icon">⊙</span>Leave</button>
+          <button class="nav-item" data-view="payroll"><span class="nav-icon">¥</span>Payroll prep</button>
+          <button class="nav-item" data-view="onboarding"><span class="nav-icon">◎</span>Onboarding</button>
+          <button class="nav-item" data-view="calendar"><span class="nav-icon">▣</span>Appointments</button>
+        </nav>
+        <nav class="nav-group secondary">
+          <div class="nav-label">Manage</div>
+          <button class="nav-item" data-view="reports"><span class="nav-icon">▥</span>Reports</button>
+          <button class="nav-item" data-view="settings"><span class="nav-icon">⚙</span>Settings</button>
+        </nav>
+        <nav class="nav-group employee-nav" hidden>
+          <div class="nav-label">My workspace</div>
+          <button class="nav-item active" data-view="employee-home"><span class="nav-icon">⌂</span>My dashboard</button>
+          <button class="nav-item" data-view="employee-onboarding"><span class="nav-icon">◎</span>Onboarding</button>
+          <button class="nav-item" data-view="employee-work"><span class="nav-icon">✓</span>My work</button>
+          <button class="nav-item" data-view="employee-hours"><span class="nav-icon">◷</span>Hours</button>
+          <button class="nav-item" data-view="employee-leave"><span class="nav-icon">⊙</span>Leave</button>
+          <button class="nav-item" data-view="employee-calendar"><span class="nav-icon">▣</span>My calendar</button>
+        </nav>
+        <div class="sidebar-footer"><div class="mini-avatar">AK</div><div><strong>Ayaka Kondo</strong><small>HR administrator</small></div><span class="more">•••</span></div>
+      </aside>
+
+      <main class="main-content">
+        <header class="topbar"><div class="breadcrumbs"><span id="crumb">Overview</span><span class="slash">/</span><span class="muted">Monday, 2 November 2026</span></div><div class="top-actions"><button class="icon-button" title="Search">⌕</button><button class="icon-button notification" title="Notifications">♢<i></i></button><button class="help-button">?</button></div></header>
+        <div id="app"></div>
+      </main>
+    </div>
+    <div id="toast" class="toast"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
+
