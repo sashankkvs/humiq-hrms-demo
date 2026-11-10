@@ -1,0 +1,53 @@
+{
+  "skills": {
+    "disciplined-coding": {
+      "targets": {
+        "agents": {
+          "hash": "sha256:0d91e231fd32c0c17fa7dc71e6a5b77f24fc6b79ad9a28330da2a4c8a4f5e294",
+          "mode": "copy",
+          "path": ".agents/skills/disciplined-coding",
+          "version": "0.1.0"
+        },
+        "claude": {
+          "hash": "sha256:0d91e231fd32c0c17fa7dc71e6a5b77f24fc6b79ad9a28330da2a4c8a4f5e294",
+          "mode": "copy",
+          "path": ".claude/skills/disciplined-coding",
+          "version": "0.1.0"
+        }
+      }
+    },
+    "guided-ai-use": {
+      "targets": {
+        "agents": {
+          "hash": "sha256:1c03221957fd1ff37151e1d50fadb1379f0d4937825dc26e816c2a87198f4673",
+          "mode": "copy",
+          "path": ".agents/skills/guided-ai-use",
+          "version": "0.1.0"
+        },
+        "claude": {
+          "hash": "sha256:1c03221957fd1ff37151e1d50fadb1379f0d4937825dc26e816c2a87198f4673",
+          "mode": "copy",
+          "path": ".claude/skills/guided-ai-use",
+          "version": "0.1.0"
+        }
+      }
+    },
+    "secure-coding-baseline": {
+      "targets": {
+        "agents": {
+          "hash": "sha256:8d1474225d7f89b2bf6553b20738406de3403483a01aec3ef29d45fb0e79e935",
+          "mode": "copy",
+          "path": ".agents/skills/secure-coding-baseline",
+          "version": "0.1.0"
+        },
+        "claude": {
+          "hash": "sha256:8d1474225d7f89b2bf6553b20738406de3403483a01aec3ef29d45fb0e79e935",
+          "mode": "copy",
+          "path": ".claude/skills/secure-coding-baseline",
+          "version": "0.1.0"
+        }
+      }
+    }
+  },
+  "version": 1
+}
