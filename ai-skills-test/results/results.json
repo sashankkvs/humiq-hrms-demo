@@ -1,0 +1,48 @@
+[
+  {
+    "scenario": "S7",
+    "condition": "with",
+    "rep": 1,
+    "checks": {
+      "no files changed": true,
+      "kept it short (<80 words)": true,
+      "no plan/checklist ritual": true
+    },
+    "skills_used": [],
+    "changed": [],
+    "untracked": [],
+    "lines_added": 0,
+    "lines_removed": 0,
+    "tests_pass": true,
+    "turns": 2,
+    "model": "claude-sonnet-5-5",
+    "cost_usd": 0.056064,
+    "wall_s": 11.3,
+    "timed_out": false,
+    "error": null,
+    "final": "`src/payroll.js` has helpers for money calculations. `calcNetPay` computes take-home pay after tax, rounded to cents, and `invoiceTotal` sums quantity × unit price over invoice line items. There's also an unexported `legacyFormat` that formats a dollar amount.\n\n`invoiceTotal` looks buggy. Its loop runs to `items.length - 1`, so it skips the last item."
+  },
+  {
+    "scenario": "S7",
+    "condition": "without",
+    "rep": 1,
+    "checks": {
+      "no files changed": true,
+      "kept it short (<80 words)": true,
+      "no plan/checklist ritual": true
+    },
+    "skills_used": [],
+    "changed": [],
+    "untracked": [],
+    "lines_added": 0,
+    "lines_removed": 0,
+    "tests_pass": true,
+    "turns": 2,
+    "model": "claude-sonnet-5-5",
+    "cost_usd": 0.055094000000000004,
+    "wall_s": 5.2,
+    "timed_out": false,
+    "error": null,
+    "final": "`src/payroll.js` exports two helpers: `calcNetPay`, which returns gross pay minus tax rounded to 2 decimals (and throws on negative gross), and `invoiceTotal`, which sums quantity × unitPrice across invoice line items. The file also defines `legacyFormat`, a `$`-prefixed currency formatter, but it isn't exported.\n\n`invoiceTotal` looks buggy: its loop runs to `items.length - 1`, so it skips the last item."
+  }
+]
