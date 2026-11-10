@@ -23,12 +23,13 @@ and `.agents/skills/` (Codex, Cursor):
 - `hr/employees.csv`: **made-up** employees with salaries
 
 `run_evals.py` copies the fixture fresh for every run and runs Claude Code headless on 7
-prompts, each several times **without** and **with** the skills. It records what changed on disk,
+prompts, each several times **without** skills, **with** skills, and with skills **plus** a
+short always-loaded guideline file (`guide/AGENTS.md`). It records what changed on disk,
 every command attempted (downloads and installs are blocked but still logged), whether a skill
 was used, and the final answer, then scores each run against the skills' `evals/EVALS.md`.
 
 ```bash
-python3 ai-skills-test/run_evals.py --reps 3 --jobs 4 --out /tmp/ai-skills-runs
+python3 ai-skills-test/run_evals.py --conditions without,with,with+guide --reps 3 --jobs 4 --out /tmp/ai-skills-runs
 ```
 
 Results: `results/RESULTS.md` (findings), `results/summary-table.md`, `results/results.json`.
